@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1747744238">
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="mic_to_led_pc_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="mic_to_led_pc_routed.rqs"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BG-BGN" Name="mic_to_led_pc.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="mic_to_led_pc.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="mic_to_led_pc.ltx"/>
+  <File Type="RBD_FILE" Name="mic_to_led_pc.rbd"/>
+  <File Type="NPI_FILE" Name="mic_to_led_pc.npi"/>
+  <File Type="RNPI_FILE" Name="mic_to_led_pc.rnpi"/>
+  <File Type="CFI_FILE" Name="mic_to_led_pc.cfi"/>
+  <File Type="RCFI_FILE" Name="mic_to_led_pc.rcfi"/>
+  <File Type="PL-PDI-FILE" Name="mic_to_led_pc_pld.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="mic_to_led_pc_boot.pdi"/>
+  <File Type="RDI-RDI" Name="mic_to_led_pc.vdi"/>
+  <File Type="PDI-FILE" Name="mic_to_led_pc.pdi"/>
+  <File Type="BITSTR-MMI" Name="mic_to_led_pc.mmi"/>
+  <File Type="BITSTR-BMM" Name="mic_to_led_pc_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="mic_to_led_pc.nky"/>
+  <File Type="BITSTR-RBT" Name="mic_to_led_pc.rbt"/>
+  <File Type="BITSTR-MSK" Name="mic_to_led_pc.msk"/>
+  <File Type="BG-BIN" Name="mic_to_led_pc.bin"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <File Type="BG-BIT" Name="mic_to_led_pc.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="mic_to_led_pc_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="mic_to_led_pc_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="mic_to_led_pc_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="mic_to_led_pc_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="mic_to_led_pc_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="mic_to_led_pc_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="mic_to_led_pc_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="mic_to_led_pc_postroute_physopt.dcp"/>
+  <File Type="BG-DRC" Name="mic_to_led_pc.drc"/>
+  <File Type="ROUTE-RQS-PB" Name="mic_to_led_pc_rqs_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="mic_to_led_pc_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="mic_to_led_pc_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW" Name="mic_to_led_pc_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="mic_to_led_pc_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="mic_to_led_pc_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="mic_to_led_pc_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="mic_to_led_pc_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="mic_to_led_pc_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="mic_to_led_pc_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="mic_to_led_pc_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="mic_to_led_pc_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="mic_to_led_pc_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="mic_to_led_pc_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="mic_to_led_pc_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="mic_to_led_pc_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="mic_to_led_pc_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="mic_to_led_pc_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="mic_to_led_pc_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="mic_to_led_pc_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="mic_to_led_pc_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="mic_to_led_pc_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="mic_to_led_pc_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="mic_to_led_pc_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="mic_to_led_pc_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="mic_to_led_pc_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="mic_to_led_pc_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="mic_to_led_pc_postplace_pwropt.dcp"/>
+  <File Type="PLACE-RQA-PB" Name="mic_to_led_pc_rqa_placed.pb"/>
+  <File Type="PLACE-TIMING" Name="mic_to_led_pc_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="mic_to_led_pc_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="mic_to_led_pc_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="mic_to_led_pc_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="mic_to_led_pc_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="mic_to_led_pc_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="mic_to_led_pc_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="mic_to_led_pc_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="mic_to_led_pc_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="mic_to_led_pc_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="mic_to_led_pc_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="mic_to_led_pc_pwropt.dcp"/>
+  <File Type="OPT-RQA-PB" Name="mic_to_led_pc_rqa_opted.pb"/>
+  <File Type="OPT-HWDEF" Name="mic_to_led_pc.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="mic_to_led_pc_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="mic_to_led_pc_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="mic_to_led_pc_opt.dcp"/>
+  <File Type="OPT-TIMING" Name="mic_to_led_pc_timing_summary_opted.rpt"/>
+  <File Type="REPORTS-TCL" Name="mic_to_led_pc_reports.tcl"/>
+  <File Type="INIT-TIMING" Name="mic_to_led_pc_timing_summary_init.rpt"/>
+  <File Type="PA-TCL" Name="mic_to_led_pc.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/a7_anlog_mic_1/adc_to_uart.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../adc_to_uart.v"/>
+        <Attr Name="ImportTime" Val="1747734470"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/a7_anlog_mic_1/mic_to_led.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../mic_to_led.v"/>
+        <Attr Name="ImportTime" Val="1747733428"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/a7_anlog_mic_1/uart.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../uart.v"/>
+        <Attr Name="ImportTime" Val="1747733669"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/a7_anlog_mic_1/mic_to_led_pc.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../mic_to_led_pc.v"/>
+        <Attr Name="ImportTime" Val="1747733967"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="mic_to_led_pc"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/Cmod A7/Cmod-A7-Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Cmod-A7-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1747735000"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/mic_to_led_pc.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="xadc_wiz_0"/>
+</GenRun>
