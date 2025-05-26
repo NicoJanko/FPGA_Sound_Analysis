@@ -1,0 +1,11 @@
+===================================
+Configuration Memory information
+===================================
+File Format        BIN
+Interface          SPIX1
+Size               4M
+Start Address      0x00000000
+End Address        0x003FFFFF
+
+Addr1         Addr2         Date                    File(s)
+0x00000000    0x0021728B    May 26 15:22:54 2025    C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_anlog_dig_mic_1/a7_anlog_dig_mic_1.runs/impl_1/mic_to_led_pc.bit
