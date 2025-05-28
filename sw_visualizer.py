@@ -10,11 +10,11 @@ from PyQt6.QtWidgets import QWidget, QVBoxLayout, QMainWindow, QApplication
 
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
-
+#COM4 win /dev/ttyUSB1 lin
 
 class SerialReader(QtCore.QThread):
     data_received = QtCore.pyqtSignal(float,int)
-    def __init__(self,port='COM4',baud=115200, parent = None):
+    def __init__(self,port='/dev/ttyUSB1',baud=115200, parent = None):
         super().__init__(parent)
         self.ser = serial.Serial(port, baudrate=baud,timeout=0)
         self.running = True
@@ -24,12 +24,18 @@ class SerialReader(QtCore.QThread):
             #if start != b'':
                 #print(f"start {start}")
             if start == b'\xaa':
+
                 anlog_raw = self.ser.read(2)
                 
                 dig_raw = self.ser.read(1)
                 
                 stop = self.ser.read(1)
-                
+                #print(f"""
+#start 0: {start},
+#analog_raw 1-2: {anlog_raw},
+#dig_raw 3: {dig_raw},
+#stop 4: {stop}
+#""")
                 if len(anlog_raw) ==2:
                     #print(f"raw aa {anlog_raw}")
                     adc_val = struct.unpack('>H',anlog_raw)[0]
