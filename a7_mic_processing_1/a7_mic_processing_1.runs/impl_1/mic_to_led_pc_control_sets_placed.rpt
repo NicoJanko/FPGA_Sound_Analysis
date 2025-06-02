@@ -1,0 +1,98 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Mon Jun  2 15:35:19 2025
+| Host         : SNPOR161 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file mic_to_led_pc_control_sets_placed.rpt
+| Design       : mic_to_led_pc
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    20 |
+|    Minimum number of control sets                        |    20 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    52 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    20 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    13 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              24 |           14 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |             199 |           69 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              21 |            7 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+------------------------------------------------------------------------------------------------+----------------------------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |                                          Enable Signal                                         |                  Set/Reset Signal                  | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+------------------------------------------------------------------------------------------------+----------------------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | adc_dig_uart/fifo_to_uart/uart_inst/tx_i_2_n_0                                                 | adc_dig_uart/fifo_to_uart/uart_inst/tx2_out        |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | adc_dig_uart/fifo_to_uart/sample_delay[13]_i_2_n_0                                             |                                                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | adc_dig_uart/fifo_to_uart/uart_inst/sending                                                    | adc_dig_uart/fifo_to_uart/uart_inst/shift_reg      |                2 |              7 |         3.50 |
+|  clk_IBUF_BUFG | adc_dig_uart/adc_to_fifo/data_in[7]_i_1_n_0                                                    |                                                    |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | adc_dig_uart/fifo_to_uart/uart_inst/shift_reg                                                  |                                                    |                5 |             10 |         2.00 |
+|  clk_IBUF_BUFG | adc_dig_uart/adc_to_fifo/FSM_onehot_state[10]_i_1_n_0                                          |                                                    |                3 |             11 |         3.67 |
+|  clk_IBUF_BUFG | adc_dig_uart/fifo_to_uart/sample_delay[13]_i_2_n_0                                             | adc_dig_uart/fifo_to_uart/sample_delay[13]_i_1_n_0 |                4 |             13 |         3.25 |
+|  clk_IBUF_BUFG |                                                                                                |                                                    |               14 |             24 |         1.71 |
+|  clk_IBUF_BUFG | adc_dig_uart/adc_to_fifo/adc_sample_0                                                          |                                                    |                5 |             25 |         5.00 |
+|  clk_IBUF_BUFG | adc_dig_uart/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/E[0] |                                                    |                8 |             27 |         3.38 |
+|  clk_IBUF_BUFG | adc_dig_uart/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0] |                                                    |                7 |             27 |         3.86 |
+|  clk_IBUF_BUFG | xadc/drdy_out                                                                                  |                                                    |               37 |             90 |         2.43 |
+|  clk_IBUF_BUFG | adc_dig_uart/adc_to_fifo/adc_to_processing/data_buffer_reg_0_255_0_0_i_1_n_0                   |                                                    |               36 |            144 |         4.00 |
+|  clk_IBUF_BUFG | adc_dig_uart/adc_to_fifo/adc_to_processing/data_buffer_reg_1024_1279_0_0_i_1_n_0               |                                                    |               36 |            144 |         4.00 |
+|  clk_IBUF_BUFG | adc_dig_uart/adc_to_fifo/adc_to_processing/data_buffer_reg_1536_1791_0_0_i_1_n_0               |                                                    |               36 |            144 |         4.00 |
+|  clk_IBUF_BUFG | adc_dig_uart/adc_to_fifo/adc_to_processing/data_buffer_reg_1280_1535_0_0_i_1_n_0               |                                                    |               36 |            144 |         4.00 |
+|  clk_IBUF_BUFG | adc_dig_uart/adc_to_fifo/adc_to_processing/data_buffer_reg_1792_2047_0_0_i_1_n_0               |                                                    |               36 |            144 |         4.00 |
+|  clk_IBUF_BUFG | adc_dig_uart/adc_to_fifo/adc_to_processing/data_buffer_reg_512_767_0_0_i_1_n_0                 |                                                    |               36 |            144 |         4.00 |
+|  clk_IBUF_BUFG | adc_dig_uart/adc_to_fifo/adc_to_processing/data_buffer_reg_256_511_0_0_i_1_n_0                 |                                                    |               36 |            144 |         4.00 |
+|  clk_IBUF_BUFG | adc_dig_uart/adc_to_fifo/adc_to_processing/data_buffer_reg_768_1023_0_0_i_1_n_0                |                                                    |               36 |            144 |         4.00 |
++----------------+------------------------------------------------------------------------------------------------+----------------------------------------------------+------------------+----------------+--------------+
+
+

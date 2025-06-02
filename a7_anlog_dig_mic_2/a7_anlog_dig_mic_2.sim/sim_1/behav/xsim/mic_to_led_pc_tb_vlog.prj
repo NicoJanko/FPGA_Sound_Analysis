@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../a7_anlog_dig_mic_2.srcs/sources_1/imports/a7_anlog_mic_1/adc_to_uart.v" \
+"../../../../a7_anlog_dig_mic_2.srcs/sources_1/new/bram_fifo.v" \
+"../../../../a7_anlog_dig_mic_2.srcs/sources_1/imports/a7_anlog_mic_1/mic_to_led.v" \
+"../../../../a7_anlog_dig_mic_2.srcs/sources_1/imports/a7_anlog_mic_1/mic_to_led_pc.v" \
+"../../../../a7_anlog_dig_mic_2.srcs/sources_1/imports/a7_anlog_mic_1/uart.v" \
+"../../../../a7_anlog_dig_mic_2.srcs/sim_1/new/xadc_wiz_0_stub.v" \
+"../../../../a7_anlog_dig_mic_2.srcs/sim_1/new/mic_to_led_pc_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
