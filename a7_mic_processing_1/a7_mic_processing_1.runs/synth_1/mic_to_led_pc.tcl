@@ -56,13 +56,6 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param tcl.statsThreshold 360
-set_param chipscope.maxJobs 8
-set_param synth.incrementalSynthesisCache {C:/Users/Nicolas Jankovsky/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-20408-SNPOR161/incrSyn}
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 

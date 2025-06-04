@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Mon Jun  2 15:34:33 2025
-# Process ID         : 26816
+# Start of session at: Wed Jun  4 09:00:37 2025
+# Process ID         : 18112
 # Current directory  : C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.runs/synth_1
 # Command line       : vivado.exe -log mic_to_led_pc.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mic_to_led_pc.tcl
 # Log file           : C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.runs/synth_1/mic_to_led_pc.vds
@@ -19,7 +19,7 @@
 # Host memory        : 137110 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 145700 MB
-# Available Virtual  : 120431 MB
+# Available Virtual  : 128747 MB
 #-----------------------------------------------------------
 source mic_to_led_pc.tcl -notrace
 Command: read_checkpoint -auto_incremental -incremental {C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.srcs/utils_1/imports/synth_1/mic_to_led_pc.dcp}
@@ -34,16 +34,16 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 12888
+INFO: [Synth 8-7075] Helper process launched with PID 16144
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1040.293 ; gain = 469.109
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1039.223 ; gain = 467.715
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-11241] undeclared symbol 'std', assumed default net type 'wire' [C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.srcs/sources_1/imports/sources_1/new/adc_to_fifo.v:70]
 INFO: [Synth 8-6157] synthesizing module 'mic_to_led_pc' [C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.srcs/sources_1/imports/sources_1/imports/FPGA_Sound_Analysis/mic_to_led_pc.v:1]
 INFO: [Synth 8-6157] synthesizing module 'mic_to_led' [C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.srcs/sources_1/imports/sources_1/imports/FPGA_Sound_Analysis/mic_to_led.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'mic_to_led' (0#1) [C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.srcs/sources_1/imports/sources_1/imports/FPGA_Sound_Analysis/mic_to_led.v:3]
-INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.runs/synth_1/.Xil/Vivado-26816-SNPOR161/realtime/xadc_wiz_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (0#1) [C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.runs/synth_1/.Xil/Vivado-26816-SNPOR161/realtime/xadc_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.runs/synth_1/.Xil/Vivado-18112-SNPOR161/realtime/xadc_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (0#1) [C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.runs/synth_1/.Xil/Vivado-18112-SNPOR161/realtime/xadc_wiz_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'adc_to_uart2' [C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.srcs/sources_1/imports/sources_1/new/adc_to_uart2.v:27]
 INFO: [Synth 8-6157] synthesizing module 'adc_to_fifo' [C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.srcs/sources_1/imports/sources_1/new/adc_to_fifo.v:23]
 INFO: [Synth 8-6157] synthesizing module 'adc_to_processing' [C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.srcs/sources_1/new/adc_to_processing.v:23]
@@ -51,8 +51,8 @@ INFO: [Synth 8-6155] done synthesizing module 'adc_to_processing' (0#1) [C:/User
 WARNING: [Synth 8-689] width (1) of port connection 'var' does not match port width (12) of module 'adc_to_processing' [C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.srcs/sources_1/imports/sources_1/new/adc_to_fifo.v:70]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.srcs/sources_1/imports/sources_1/new/adc_to_fifo.v:81]
 INFO: [Synth 8-6155] done synthesizing module 'adc_to_fifo' (0#1) [C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.srcs/sources_1/imports/sources_1/new/adc_to_fifo.v:23]
-INFO: [Synth 8-6157] synthesizing module 'fifo_generator_0' [C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.runs/synth_1/.Xil/Vivado-26816-SNPOR161/realtime/fifo_generator_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_0' (0#1) [C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.runs/synth_1/.Xil/Vivado-26816-SNPOR161/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_0' [C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.runs/synth_1/.Xil/Vivado-18112-SNPOR161/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_0' (0#1) [C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.runs/synth_1/.Xil/Vivado-18112-SNPOR161/realtime/fifo_generator_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'full' of module 'fifo_generator_0' is unconnected for instance 'fifo' [C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.srcs/sources_1/imports/sources_1/new/adc_to_uart2.v:59]
 WARNING: [Synth 8-7071] port 'empty' of module 'fifo_generator_0' is unconnected for instance 'fifo' [C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.srcs/sources_1/imports/sources_1/new/adc_to_uart2.v:59]
 WARNING: [Synth 8-7023] instance 'fifo' of module 'fifo_generator_0' has 9 connections declared, but only 7 given [C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.srcs/sources_1/imports/sources_1/new/adc_to_uart2.v:59]
@@ -69,18 +69,18 @@ WARNING: [Synth 8-7129] Port i_xadc[2] in module adc_to_processing is either unc
 WARNING: [Synth 8-7129] Port i_xadc[1] in module adc_to_processing is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_xadc[0] in module adc_to_processing is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1151.348 ; gain = 580.164
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1151.258 ; gain = 579.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1151.348 ; gain = 580.164
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1151.258 ; gain = 579.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1151.348 ; gain = 580.164
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1151.258 ; gain = 579.750
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1151.348 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1151.258 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -97,22 +97,22 @@ Parsing XDC File [C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/
 Finished Parsing XDC File [C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1224.316 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1243.164 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1224.316 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1243.164 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1224.316 ; gain = 653.133
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1243.164 ; gain = 671.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1224.316 ; gain = 653.133
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1243.164 ; gain = 671.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -120,7 +120,7 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property KEEP_HIERARCHY = SOFT for xadc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_dig_uart/fifo. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1224.316 ; gain = 653.133
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1243.164 ; gain = 671.656
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'adc_to_fifo'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'fifo_to_uart'
@@ -151,29 +151,35 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'fifo_to_uart'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1224.316 ; gain = 653.133
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1243.164 ; gain = 671.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   4 Input   24 Bit       Adders := 1     
+	   4 Input   39 Bit       Adders := 1     
+	   4 Input   27 Bit       Adders := 1     
+	   3 Input   24 Bit       Adders := 1     
+	   2 Input   15 Bit       Adders := 1     
 	   2 Input   14 Bit       Adders := 1     
-	   2 Input   11 Bit       Adders := 1     
 	   2 Input    7 Bit       Adders := 1     
 	   2 Input    4 Bit       Adders := 1     
 	   2 Input    3 Bit       Adders := 1     
 +---Registers : 
-	               24 Bit    Registers := 1     
+	               39 Bit    Registers := 1     
+	               27 Bit    Registers := 1     
 	               16 Bit    Registers := 1     
-	               12 Bit    Registers := 3     
-	               11 Bit    Registers := 1     
+	               14 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
 	               10 Bit    Registers := 1     
 	                8 Bit    Registers := 1     
 	                7 Bit    Registers := 1     
 	                4 Bit    Registers := 2     
 	                1 Bit    Registers := 11    
++---RAMs : 
+	             240K Bit	(10240 X 24 bit)          RAMs := 1     
+	             120K Bit	(10240 X 12 bit)          RAMs := 1     
 +---Muxes : 
 	   5 Input   16 Bit        Muxes := 1     
 	   2 Input   10 Bit        Muxes := 1     
@@ -199,21 +205,13 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-3936] Found unconnected internal register 'adc_dig_uart/adc_to_fifo/adc_to_processing/acc_reg' and it is trimmed from '12' to '1' bits. [C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.srcs/sources_1/new/adc_to_processing.v:55]
-DSP Report: Generating DSP adc_dig_uart/adc_to_fifo/adc_to_processing/sq_sample, operation Mode is: A*B.
-DSP Report: operator adc_dig_uart/adc_to_fifo/adc_to_processing/sq_sample is absorbed into DSP adc_dig_uart/adc_to_fifo/adc_to_processing/sq_sample.
-DSP Report: Generating DSP adc_dig_uart/adc_to_fifo/adc_to_processing/sq_acc0, operation Mode is: -C+A*B+1-1.
-DSP Report: operator adc_dig_uart/adc_to_fifo/adc_to_processing/sq_acc0 is absorbed into DSP adc_dig_uart/adc_to_fifo/adc_to_processing/sq_acc0.
-DSP Report: operator adc_dig_uart/adc_to_fifo/adc_to_processing/sq_sample is absorbed into DSP adc_dig_uart/adc_to_fifo/adc_to_processing/sq_acc0.
-DSP Report: Generating DSP adc_dig_uart/adc_to_fifo/adc_to_processing/sq_acc_reg, operation Mode is: (PCIN+P)'.
-DSP Report: register adc_dig_uart/adc_to_fifo/adc_to_processing/sq_acc_reg is absorbed into DSP adc_dig_uart/adc_to_fifo/adc_to_processing/sq_acc_reg.
-DSP Report: operator adc_dig_uart/adc_to_fifo/adc_to_processing/sq_acc0_dspDelayedAccum is absorbed into DSP adc_dig_uart/adc_to_fifo/adc_to_processing/sq_acc_reg.
+DSP Report: Generating DSP adc_dig_uart/adc_to_fifo/adc_to_processing/sq_diff, operation Mode is: A*B.
+DSP Report: operator adc_dig_uart/adc_to_fifo/adc_to_processing/sq_diff is absorbed into DSP adc_dig_uart/adc_to_fifo/adc_to_processing/sq_diff.
+DSP Report: operator adc_dig_uart/adc_to_fifo/adc_to_processing/sq_diff is absorbed into DSP adc_dig_uart/adc_to_fifo/adc_to_processing/sq_diff.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1224.316 ; gain = 653.133
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1243.164 ; gain = 671.656
 ---------------------------------------------------------------------------------
- Sort Area is  adc_dig_uart/adc_to_fifo/adc_to_processing/sq_acc0_2 : 0 1 : 143 1430 : Used 1 time 100
- Sort Area is  adc_dig_uart/adc_to_fifo/adc_to_processing/sq_acc0_2 : 0 0 : 1287 1430 : Used 1 time 0
- Sort Area is  adc_dig_uart/adc_to_fifo/adc_to_processing/sq_sample_0 : 0 0 : 1049 1049 : Used 1 time 0
+ Sort Area is  adc_dig_uart/adc_to_fifo/adc_to_processing/sq_diff_0 : 0 0 : 3446 3446 : Used 1 time 0
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
@@ -222,8 +220,8 @@ Distributed RAM: Preliminary Mapping Report (see note below)
 +--------------+---------------------------------------------------------------+-----------+----------------------+------------------+
 |Module Name   | RTL Object                                                    | Inference | Size (Depth x Width) | Primitives       | 
 +--------------+---------------------------------------------------------------+-----------+----------------------+------------------+
-|mic_to_led_pc | adc_dig_uart/adc_to_fifo/adc_to_processing/data_buffer_reg    | Implied   | 2 K x 12             | RAM256X1S x 96   | 
-|mic_to_led_pc | adc_dig_uart/adc_to_fifo/adc_to_processing/sq_data_buffer_reg | Implied   | 2 K x 24             | RAM256X1S x 192  | 
+|mic_to_led_pc | adc_dig_uart/adc_to_fifo/adc_to_processing/data_buffer_reg    | Implied   | 16 K x 12            | RAM256X1S x 480  | 
+|mic_to_led_pc | adc_dig_uart/adc_to_fifo/adc_to_processing/sq_diff_buffer_reg | Implied   | 16 K x 24            | RAM256X1S x 960  | 
 +--------------+---------------------------------------------------------------+-----------+----------------------+------------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
@@ -232,9 +230,7 @@ DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding R
 +------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name       | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|adc_to_processing | A*B         | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|adc_to_processing | -C+A*B+1-1  | 12     | 12     | 24     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|adc_to_processing | (PCIN+P)'   | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
+|adc_to_processing | A*B         | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 +------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
@@ -245,13 +241,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1393.770 ; gain = 822.586
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1405.891 ; gain = 834.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1428.477 ; gain = 857.293
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1476.746 ; gain = 905.238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -261,8 +257,8 @@ Distributed RAM: Final Mapping Report
 +--------------+---------------------------------------------------------------+-----------+----------------------+------------------+
 |Module Name   | RTL Object                                                    | Inference | Size (Depth x Width) | Primitives       | 
 +--------------+---------------------------------------------------------------+-----------+----------------------+------------------+
-|mic_to_led_pc | adc_dig_uart/adc_to_fifo/adc_to_processing/data_buffer_reg    | Implied   | 2 K x 12             | RAM256X1S x 96   | 
-|mic_to_led_pc | adc_dig_uart/adc_to_fifo/adc_to_processing/sq_data_buffer_reg | Implied   | 2 K x 24             | RAM256X1S x 192  | 
+|mic_to_led_pc | adc_dig_uart/adc_to_fifo/adc_to_processing/data_buffer_reg    | Implied   | 16 K x 12            | RAM256X1S x 480  | 
+|mic_to_led_pc | adc_dig_uart/adc_to_fifo/adc_to_processing/sq_diff_buffer_reg | Implied   | 16 K x 24            | RAM256X1S x 960  | 
 +--------------+---------------------------------------------------------------+-----------+----------------------+------------------+
 
 ---------------------------------------------------------------------------------
@@ -272,7 +268,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1429.016 ; gain = 857.832
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1484.363 ; gain = 912.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -290,50 +286,48 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1625.168 ; gain = 1053.984
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1666.613 ; gain = 1095.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1625.168 ; gain = 1053.984
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1666.613 ; gain = 1095.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1625.168 ; gain = 1053.984
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1666.613 ; gain = 1095.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1625.168 ; gain = 1053.984
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1666.613 ; gain = 1095.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1625.168 ; gain = 1053.984
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1666.613 ; gain = 1095.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1625.168 ; gain = 1053.984
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1666.613 ; gain = 1095.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 DSP Final Report (the ' indicates corresponding REG is set)
-+------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name       | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|adc_to_processing | A*B          | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|adc_to_processing | not(C)+A*B+1 | 12     | 12     | 24     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|adc_to_processing | (PCIN+P)'    | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
-+------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name       | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|adc_to_processing | A*B         | 24     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 
 Report BlackBoxes: 
@@ -351,45 +345,46 @@ Report Cell Usage:
 |1     |fifo_generator |     1|
 |2     |xadc_wiz       |     1|
 |3     |BUFG           |     1|
-|4     |CARRY4         |    10|
-|5     |DSP48E1        |     3|
-|8     |LUT1           |    11|
-|9     |LUT2           |    34|
-|10    |LUT3           |    34|
-|11    |LUT4           |    41|
-|12    |LUT5           |    31|
-|13    |LUT6           |   101|
-|14    |MUXF7          |    36|
-|15    |RAM256X1S      |   288|
-|16    |FDRE           |   183|
-|17    |FDSE           |     1|
-|18    |IBUF           |     4|
-|19    |OBUF           |     3|
+|4     |CARRY4         |   166|
+|5     |DSP48E1        |     1|
+|6     |LUT1           |    57|
+|7     |LUT2           |   201|
+|8     |LUT3           |   287|
+|9     |LUT4           |   295|
+|10    |LUT5           |   111|
+|11    |LUT6           |   598|
+|12    |MUXF7          |   180|
+|13    |MUXF8          |    72|
+|14    |RAM256X1S      |  1440|
+|15    |FDRE           |   439|
+|16    |FDSE           |     1|
+|17    |IBUF           |     4|
+|18    |OBUF           |     3|
 +------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1625.168 ; gain = 1053.984
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1666.613 ; gain = 1095.105
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1625.168 ; gain = 981.016
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1625.168 ; gain = 1053.984
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 1666.613 ; gain = 1003.199
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1666.613 ; gain = 1095.105
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1625.168 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 337 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1675.801 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1859 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'mic_to_led_pc' is not ideal for floorplanning, since the cellview 'adc_to_processing' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1625.168 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1679.492 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 288 instances were transformed.
-  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 288 instances
+  A total of 1440 instances were transformed.
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 1440 instances
 
-Synth Design complete | Checksum: efdc6a39
+Synth Design complete | Checksum: af1e1a40
 INFO: [Common 17-83] Releasing license: Synthesis
 46 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-INFO: [Common 17-600] The following parameters have non-default value.
-tcl.statsThreshold
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1625.168 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1679.492 ; gain = 1301.180
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1679.492 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.runs/synth_1/mic_to_led_pc.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file mic_to_led_pc_utilization_synth.rpt -pb mic_to_led_pc_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Jun  2 15:34:56 2025...
+INFO: [Common 17-206] Exiting Vivado at Wed Jun  4 09:01:17 2025...

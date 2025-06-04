@@ -10,6 +10,7 @@ from PyQt6.QtWidgets import QWidget, QVBoxLayout,QHBoxLayout, QMainWindow, QAppl
 
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
+from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 #COM4 win /dev/ttyUSB1 lin
 
 POSSIBLE_COM = ['COM4','/dev/ttyUSB1']
@@ -20,6 +21,7 @@ class SerialReader(QtCore.QThread):
         super().__init__(parent)
         self.baud = baud
         self.running=False
+        self.paused = False
 
     def update_port(self,com_port):
         self.port = com_port
@@ -34,9 +36,18 @@ class SerialReader(QtCore.QThread):
     def getStatus(self):
         return self.running
     
+    def pause(self):
+        self.paused = True
+
+    def resume(self):
+        self.paused = False
+
     def run(self):
         print("launch run")
         while self.running:
+            if self.paused:
+                self.msleep(100)
+                continue
             #start_list = list(self.ser.read(50))
             #print(f'First 50 bytes : { start_list}')
             start = self.ser.read(1)
@@ -75,7 +86,7 @@ class SerialReader(QtCore.QThread):
                         mean_val = np.nan
                     try:
                         std_val = struct.unpack('>H',std_raw)[0]
-                        #std_val = (std_val/4095.0)*3.3
+                        #std_val = np.sqrt(std_val)
                     except:
                         std_val = np.nan
 
@@ -118,6 +129,7 @@ class Visualizer(QWidget):
         self.analog = analog
         self.canvas = FigureCanvas(Figure(figsize=(10,20)))
         self.ax1 = self.canvas.figure.add_subplot(111)
+        self.nav_toolbar = NavigationToolbar(self.canvas, self)
 
         self.ax1.set_ylim(y_lim[0],y_lim[1])
 
@@ -133,6 +145,7 @@ class Visualizer(QWidget):
 
         layout = QVBoxLayout()
         layout.addWidget(self.canvas)
+        layout.addWidget(self.nav_toolbar)
         self.setLayout(layout)
 
         self.timer = QtCore.QTimer()
@@ -168,7 +181,7 @@ class Visualizer(QWidget):
 class App(QMainWindow):
     def __init__(self, parent = None):
         super().__init__(parent)
-        self.analog_plot = Visualizer(analog=True, y_lim=(2000,4000))
+        self.analog_plot = Visualizer(analog=True, y_lim=(2800,2900))
         self.dig_plot = Visualizer(analog=False, y_lim=(-0.3,1.3))
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
@@ -176,6 +189,10 @@ class App(QMainWindow):
         self.connect_layout = QHBoxLayout()
         self.connect_button = QPushButton("Connect")
         self.connect_button.clicked.connect(self.launch_reader)
+        self.pause_button = QPushButton("Pause")
+        self.pause_button.setCheckable(True)
+        self.pause_button.clicked.connect(self.toggle_pause)
+
 
         self.status = QLabel()
         self.status.setFixedSize(20,20)
@@ -187,6 +204,7 @@ class App(QMainWindow):
         self.connect_layout.addWidget(self.status)
         self.connect_layout.addWidget(self.connect_button)
         self.connect_layout.addWidget(self.com_combobox)
+        self.connect_layout.addWidget(self.pause_button)
         self.layout_.addLayout(self.connect_layout)
 
         self.layout_.addWidget(self.analog_plot)
@@ -205,6 +223,14 @@ class App(QMainWindow):
                 self.reader.start()
                 self.status.setStyleSheet("background-color: green; border: 1px solid black;")
         
+
+    def toggle_pause(self):
+        if self.pause_button.isChecked():
+            self.reader.pause()
+            self.pause_button.setText("Resume")
+        else:
+            self.reader.resume()
+            self.pause_button.setText("Pause")
 
     def closeEvent(self, event):
         self.reader.stop()

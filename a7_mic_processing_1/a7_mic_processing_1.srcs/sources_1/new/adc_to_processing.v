@@ -28,13 +28,13 @@ module adc_to_processing(
     output wire [11:0] var
     );
     
-    parameter N = 2048; // a power of 2 for fastest average computation
+    parameter N = 10240; // a power of 2 for fastest average computation
     localparam DATA_WIDTH = 12;
     localparam SQ_WIDTH = 2*DATA_WIDTH; // 12 bits data
     localparam ACC_WIDTH = DATA_WIDTH + $clog2(N);
     
     reg [DATA_WIDTH-1:0] data_buffer [0:N-1];
-    reg [SQ_WIDTH-1:0] sq_data_buffer [0:N-1];
+    reg [SQ_WIDTH-1:0] sq_diff_buffer [0:N-1];
     reg [ACC_WIDTH:0] acc = 0;
     reg [SQ_WIDTH+$clog2(N):0] sq_acc = 0;
     reg [$clog2(N)-1:0] pointer = 0;
@@ -48,15 +48,15 @@ module adc_to_processing(
     // first fill the buffer at 0
     
     wire [11:0] sample = i_xadc[15:4];
-    wire [SQ_WIDTH-1:0] sq_sample = i_xadc[15:4]*i_xadc[15:4];
+    wire [SQ_WIDTH-1:0] sq_diff = (i_xadc[15:4]-mean)*(i_xadc[15:4]-mean);
     always @(posedge clk) begin
         if (ready) begin
             // start with moving average
             acc <= acc - data_buffer[pointer] + sample;
-            sq_acc <= sq_acc - sq_data_buffer[pointer] + sq_sample;
+            sq_acc <= sq_acc - sq_diff_buffer[pointer] + sq_diff;
             
             data_buffer[pointer] <= sample;
-            sq_data_buffer[pointer] <= sq_sample;
+            sq_diff_buffer[pointer] <= sq_diff;
             
             pointer <= (pointer +1 ) %N;
             
@@ -72,5 +72,5 @@ module adc_to_processing(
     
     
     assign mean = acc/N;
-    assign var = ((sq_acc/N)-(mean*mean));
+    assign var = sq_acc/N;
 endmodule
