@@ -59,15 +59,15 @@ module adc_to_fifo(
     
     reg i_dig_sync_0 = 0;
     reg i_dig_sync_1 = 0;
-    wire [11:0] mean;
-    wire [11:0] var;
+    wire [15:0] mean;
+    wire [15:0] std;
     
     adc_to_processing adc_to_processing (
         .clk(clk),
         .ready(ready),
         .i_xadc(i_xadc),
         .mean(mean),
-        .var(std)    
+        .std(std)    
     );
     
     always @(posedge clk) begin
@@ -86,8 +86,8 @@ module adc_to_fifo(
         end
         xadc_ready: begin
             adc_sample = {4'b0000, i_xadc[15:4]};
-            mean_sample = {4'b0000, mean};
-            std_sample = {4'b0000, std};
+            mean_sample = mean;//{4'b0000, mean};
+            std_sample = std;//{4'b0000, std};
             //adc_sample = 16'h1234;
             state <= start;
         end

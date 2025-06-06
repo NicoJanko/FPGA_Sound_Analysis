@@ -104,7 +104,9 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param tcl.statsThreshold 360
   set_param chipscope.maxJobs 8
+  set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 16  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a35tcpg236-1
@@ -122,6 +124,7 @@ OPTRACE "add files" START { }
   add_files -quiet {{C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.runs/synth_1/mic_to_led_pc.dcp}}
   read_ip -quiet {{C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci}}
   read_ip -quiet {{C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci}}
+  read_ip -quiet {{c:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.srcs/sources_1/ip/cordic_0_2/cordic_0.xci}}
 OPTRACE "read constraints: implementation" START { }
   read_xdc {{C:/Users/Nicolas Jankovsky/Documents/CytoMEMS/FPGA_Simulation/CMOD_A7_35T/FPGA_Sound_Analysis/a7_mic_processing_1/a7_mic_processing_1.srcs/constrs_1/imports/CMOD_A7_35T/Cmod-A7-Master.xdc}}
 OPTRACE "read constraints: implementation" END { }

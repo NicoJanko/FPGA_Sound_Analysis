@@ -16,7 +16,7 @@ from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as Navigatio
 POSSIBLE_COM = ['COM4','/dev/ttyUSB1']
 
 class SerialReader(QtCore.QThread):
-    data_received = QtCore.pyqtSignal(float,float,float,int)
+    data_received = QtCore.pyqtSignal(float,float,float,float,int)
     def __init__(self,baud=115200, parent = None):
         super().__init__(parent)
         self.baud = baud
@@ -59,8 +59,9 @@ class SerialReader(QtCore.QThread):
                 #anlog_raw1 = self.ser.read(1)
                 #anlog_raw2 = self.ser.read(1)
                 anlog_raw = self.ser.read(2)
-                mean_raw = self.ser.read(2)
-                std_raw = self.ser.read(2)
+                post_raw = self.ser.read(2)
+                negt_raw = self.ser.read(2)
+                wave_raw = self.ser.read(2)
                 
                 dig_start = self.ser.read(1)
                 
@@ -80,19 +81,24 @@ class SerialReader(QtCore.QThread):
                     except:
                         adv_val = np.nan
                     try:
-                        mean_val = struct.unpack('>H',mean_raw)[0]
+                        post_val = struct.unpack('>H',post_raw)[0]
                         #mean_val = (mean_val/4095.0)*3.3
                     except:
-                        mean_val = np.nan
+                        post_val = np.nan
                     try:
-                        std_val = struct.unpack('>H',std_raw)[0]
+                        #print(f"std_raw : {std_raw}")
+                        negt_val = struct.unpack('>H',negt_raw)[0]
                         #std_val = np.sqrt(std_val)
                     except:
-                        std_val = np.nan
+                        negt_val = np.nan
+                    try:
+                        wave_val = struct.unpack('>H',wave_raw)[0]
+                    except:
+                        wave_val = np.nan
 
                     
                     #print(f'adv_val {adv_val}')
-                    self.data_received.emit(adv_val,mean_val,std_val,-1)
+                    self.data_received.emit(adv_val,post_val,negt_val,wave_val,-1)
                 if dig_start == b'\xbb':
                     #print(f"stop {stop}")
                     #print(f"dig_raw {dig_raw}")
@@ -101,7 +107,7 @@ class SerialReader(QtCore.QThread):
                         self.data_received.emit(-1,dig_val)
                     except TypeError:
                         dig_val = np.nan
-                        self.data_received.emit(-1,-1,-1,dig_val)
+                        self.data_received.emit(-1,-1,-1,-1,dig_val)
                     #print(f"dig_val {dig_val}")
                     #self.data_received.emit(-1,dig_val)
                     #raw = self.ser.read(1)
@@ -133,14 +139,19 @@ class Visualizer(QWidget):
 
         self.ax1.set_ylim(y_lim[0],y_lim[1])
 
-        self.data = deque([0]*10000,maxlen=10000)
-        self.pos_threshold = deque([0]*10000,maxlen=10000)
-        self.neg_threshold  = deque([0]*10000,maxlen=10000)
+        
+        if self.analog:
+            self.data = deque([0]*10000,maxlen=10000)
+            self.pos_threshold = deque([0]*10000,maxlen=10000)
+            self.neg_threshold  = deque([0]*10000,maxlen=10000)
+        else:
+            self.data = deque([np.nan]*500,maxlen=500)
 
 
         self.line, = self.ax1.plot(self.data)
-        self.pos_lin, = self.ax1.plot(self.pos_threshold, color='red', linestyle='--')
-        self.neg_lin, = self.ax1.plot(self.neg_threshold, color='green', linestyle='--')
+        if self.analog:
+            self.pos_lin, = self.ax1.plot(self.pos_threshold, color='red', linestyle='--')
+            self.neg_lin, = self.ax1.plot(self.neg_threshold, color='green', linestyle='--')
 
 
         layout = QVBoxLayout()
@@ -150,39 +161,42 @@ class Visualizer(QWidget):
 
         self.timer = QtCore.QTimer()
         self.timer.timeout.connect(self.update_plot)
-        self.timer.start(60)
+        self.timer.start(1)
 
     def update_plot(self):
         self.line.set_ydata(self.data)
         self.line.set_xdata(range(len(self.data)))
-        self.pos_lin.set_ydata(self.pos_threshold)
-        #self.neg_lin.set_ydata(self.neg_threshold)
+        if self.analog:
+            self.pos_lin.set_ydata(self.pos_threshold)
+            self.neg_lin.set_ydata(self.neg_threshold)
 
         self.ax1.relim()
         self.ax1.autoscale_view()
 
         self.canvas.draw()
 
-    def add_data(self, analog_val,mean_val, std_val, dig_val):
+    def add_data(self, analog_val,post_val, negt_val,wave_val, dig_val):
         if self.analog:
             if analog_val >=0:
                 #print(f"addind adv_val {analog_val}")
                 self.data.append(analog_val)
-                print(f" value : {analog_val} mean_val {mean_val},true_maean {np.mean(list(self.data)[-50:])} std_val {std_val}")
-                self.pos_threshold.append(mean_val+2*std_val)
-                self.neg_threshold.append(mean_val-2*std_val)
+                print(f" value : {analog_val} pos_threshold {post_val},neg threshold {negt_val}")
+                #print(f"wave_val{wave_val}")
+                #print(f" noise : {2*std_val} mean {mean_val} pos {mean_val+2*std_val}, neg {mean_val-2*std_val}")
+                self.pos_threshold.append(post_val)
+                self.neg_threshold.append(negt_val)
         else:
-            if dig_val >=0:
-                #print(f"addind dig_val {dig_val}")
-                self.data.append(dig_val)
+            if wave_val >0:
+                print(f"addind wave_val {wave_val}")
+                self.data.append(wave_val)
 
         
 
 class App(QMainWindow):
     def __init__(self, parent = None):
         super().__init__(parent)
-        self.analog_plot = Visualizer(analog=True, y_lim=(2800,2900))
-        self.dig_plot = Visualizer(analog=False, y_lim=(-0.3,1.3))
+        self.analog_plot = Visualizer(analog=True, y_lim=(500,3000))
+        self.wave_plot = Visualizer(analog=False, y_lim=(500,3000))
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
         self.layout_ = QVBoxLayout()
@@ -208,10 +222,10 @@ class App(QMainWindow):
         self.layout_.addLayout(self.connect_layout)
 
         self.layout_.addWidget(self.analog_plot)
-        self.layout_.addWidget(self.dig_plot)
+        self.layout_.addWidget(self.wave_plot)
         self.reader = SerialReader()
         self.reader.data_received.connect(self.analog_plot.add_data)
-        self.reader.data_received.connect(self.dig_plot.add_data)
+        self.reader.data_received.connect(self.wave_plot.add_data)
 
 
         self.central_widget.setLayout(self.layout_)

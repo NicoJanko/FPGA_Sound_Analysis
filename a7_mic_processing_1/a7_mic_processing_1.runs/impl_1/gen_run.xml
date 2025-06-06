@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1749020436">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1749032861">
   <File Type="PA-TCL" Name="mic_to_led_pc.tcl"/>
   <File Type="REPORTS-TCL" Name="mic_to_led_pc_reports.tcl"/>
   <File Type="INIT-TIMING" Name="mic_to_led_pc_timing_summary_init.rpt"/>
@@ -210,5 +210,6 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="cordic_0"/>
   <BlockFileSet Type="BlockSrcs" Name="fifo_generator_0"/>
 </GenRun>

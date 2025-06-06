@@ -24,11 +24,11 @@ module adc_to_processing(
     input wire clk,
     input wire ready,
     input wire [15:0] i_xadc,
-    output wire [11:0] mean,
-    output wire [11:0] var
+    output wire [15:0] mean,
+    output wire [15:0] std
     );
     
-    parameter N = 10240; // a power of 2 for fastest average computation
+    parameter N = 4096; // a power of 2 for fastest average computation
     localparam DATA_WIDTH = 12;
     localparam SQ_WIDTH = 2*DATA_WIDTH; // 12 bits data
     localparam ACC_WIDTH = DATA_WIDTH + $clog2(N);
@@ -44,7 +44,18 @@ module adc_to_processing(
     reg [31:0] variance = 0;
     reg signed [11:0] diff;
     integer i;
-
+    
+    wire [15:0] var;
+    wire sqrt_in_valid;
+    
+    cordic_0 sqrt (
+        .aclk(clk),
+        .s_axis_cartesian_tvalid(ready),
+        .s_axis_cartesian_tdata(var), //16-bit input
+        .m_axis_dout_tvalid(),
+        .m_axis_dout_tdata(std) //16-bit output
+    ); //9 cycle latency
+        
     // first fill the buffer at 0
     
     wire [11:0] sample = i_xadc[15:4];
@@ -63,14 +74,10 @@ module adc_to_processing(
             if (counter < N) begin
                 counter <= counter +1;
             end 
-            
-            
-    
-            //std <= 12'h123;
+       //std <= 12'h123;
         end
     end
     
-    
-    assign mean = acc/N;
-    assign var = sq_acc/N;
+    assign mean = acc>>$clog2(N);
+    assign var = sq_acc>>$clog2(N);
 endmodule
